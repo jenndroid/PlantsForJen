@@ -1,31 +1,38 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
-import CourseList from './components/CourseList';
-import CourseForm from './components/CourseForm';
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import PlantList from "./components/PlantList";
+import PlantForm from "./components/PlantForm";
 
 function App() {
-    const [courses, setCourses] = useState([]);
+  //at app level, courses is set to nothing initially
+  const [plants, setPlants] = useState([]);
 
-    const loadCourses = async () => {
-        try {
-            const res = await fetch('/api/courses');
-            const courses = await res.json();
-            setCourses(courses);
-        } catch (error) {
-            console.error(error);
-        }
-    };
+  //we need to load all the courses by looking at all the records in the table,
+  //fetch req on line 14
+  //pass that into setCourse
+  const loadPlants = async () => {
+    try {
+      const res = await fetch("/api/plants");
+      const plants = await res.json();
+      setPlants(plants);
+      console.log(plants);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
-    useEffect(() => {
-        loadCourses();
-    }, []);
-    return (
-        <div className="container mt-5">
-            <h1 className="mb-5 text-center">Course Tracker</h1>
-            <CourseForm courseAdded={loadCourses} />
-            <CourseList courses={courses} refreshCourses={loadCourses} />
-        </div>
-    );
+  //useEffect with no dependencies run loadCourses every time this page loads
+  useEffect(() => {
+    loadPlants();
+  }, []);
+  return (
+    <div className="container mt-5">
+      <h1 className="mb-5 text-center">Plant wishlist</h1>
+      {/* the fetch request to get all course records is  passed as a prop to courseForm and renamed */}
+      <PlantForm plantAdded={loadPlants} />
+      <PlantList plants={plants} refreshPlants={loadPlants} />
+    </div>
+  );
 }
 
 export default App;
