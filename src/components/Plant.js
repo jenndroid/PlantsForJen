@@ -3,7 +3,7 @@ import React from "react";
 export default function Plant({ plant, refreshPlants }) {
   const markPlantPurchased = async () => {
     try {
-      await fetch("/.netlify/functions/plants", {
+      await fetch("/api/plants", {
         method: "PUT",
         body: JSON.stringify({ ...plant, purchased: true }),
       });
@@ -15,7 +15,7 @@ export default function Plant({ plant, refreshPlants }) {
 
   const deletePlant = async () => {
     try {
-      await fetch("/.netlify/functions/plants", {
+      await fetch("/api/plants", {
         method: "DELETE",
         body: JSON.stringify({ id: plant.id }),
       });
