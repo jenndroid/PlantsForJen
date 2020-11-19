@@ -23,7 +23,7 @@ export default function PlantForm({ plantAdded }) {
   const submitPlant = async (e) => {
     e.preventDefault();
     try {
-      await fetch("//.netlify/functions/plants", {
+      await fetch("/.netlify/functions/plants", {
         method: "POST",
         body: JSON.stringify({
           name,

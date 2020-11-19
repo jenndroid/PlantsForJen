@@ -12,7 +12,7 @@ function App() {
   //pass that into setCourse
   const loadPlants = async () => {
     try {
-      const res = await fetch("//.netlify/functions/plants");
+      const res = await fetch("/.netlify/functions/plants");
       const plants = await res.json();
       setPlants(plants);
       console.log(plants);
