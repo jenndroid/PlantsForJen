@@ -29,9 +29,9 @@ export default function Plant({ plant, refreshPlants }) {
   return (
     <div className="list-group-item">
       {/* the name is hyperlinked */}
-      <a href={plant.link}>
-        <h4 className="list-group-item-heading">{plant.name}</h4>
-      </a>
+      <h4 className="list-group-item-heading">{plant.name}</h4>
+      {/* <a href={plant.img_link}></a> */}
+      <img className="img plant" src={plant.img_link} alt={plant.name} />
       <p>
         {/* if there are tags for the course, display them by creating one span element for each  */}
         Tags:{" "}

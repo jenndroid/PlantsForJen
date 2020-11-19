@@ -4,14 +4,14 @@ import Tags from "./Tags";
 export default function PlantForm({ plantAdded }) {
   //set states
   const [name, setName] = useState("");
-  const [link, setLink] = useState("");
+  const [img_link, setImageLink] = useState("");
   const [tags, setTags] = useState([]);
   const [count, setCount] = useState(0);
 
   //resetForm just empties out each field by resetting states
   const resetForm = () => {
     setName("");
-    setLink("");
+    setImageLink("");
     setCount(count + 1);
   };
 
@@ -27,7 +27,7 @@ export default function PlantForm({ plantAdded }) {
         method: "POST",
         body: JSON.stringify({
           name,
-          link,
+          img_link,
           tags,
         }),
       });
@@ -36,7 +36,7 @@ export default function PlantForm({ plantAdded }) {
     } catch (err) {
       console.error(err);
     }
-    console.log(name, link);
+    console.log(name, img_link);
   };
 
   return (
@@ -55,13 +55,13 @@ export default function PlantForm({ plantAdded }) {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="link">Link</label>
+            <label htmlFor="img_link">Image Link</label>
             <input
               type="text"
-              name="link"
-              value={link}
+              name="img_link"
+              value={img_link}
               className="form-control"
-              onChange={(e) => setLink(e.target.value)}
+              onChange={(e) => setImageLink(e.target.value)}
             />
           </div>
           <div className="form-group">
