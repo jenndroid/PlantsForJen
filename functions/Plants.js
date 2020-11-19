@@ -18,6 +18,7 @@ exports.handler = async (event) => {
   } else if (event.httpMethod === "DELETE") {
     return await deletePlant(event);
   } else {
+    //unknown request, return empty object
     return formattedReturn(405, {});
   }
 };

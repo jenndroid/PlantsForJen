@@ -3,6 +3,8 @@ const formattedReturn = require("./formattedReturn");
 module.exports = async (event) => {
   try {
     const allPlants = await table.select().firstPage();
+    //a lot of extraneous info is stripped out-
+    //for each element of the returned array, an object is created with id and all the rest of the fields
     const formattedAllPlants = allPlants.map((plant) => ({
       id: plant.id,
       ...plant.fields,

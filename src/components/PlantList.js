@@ -9,11 +9,7 @@ export default function PlantList({ plants, refreshPlants }) {
         {plants
           .filter((plant) => !plant.purchased)
           .map((plant) => (
-            <Plant
-              plant={plants}
-              key={plant.id}
-              refreshPlants={refreshPlants}
-            />
+            <Plant plant={plant} key={plant.id} refreshPlants={refreshPlants} />
           ))}
       </div>
       <h2 className="mt-5 mb-3">Got</h2>
