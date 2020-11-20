@@ -4,16 +4,19 @@ import styled from "styled-components";
 const StyledCard = styled.section`
   display: flex;
   align-items: center;
-  height: 25rem;
+  height: 35rem;
   width: auto;
   margin: 1rem;
   padding: 0.5rem;
+  border: 5px solid black;
 `;
 
 const ImageContainer = styled.div`
-  height: 100%;
-  width: auto;
+  height: 500px;
+  width: 600px;
   z-index: 1;
+  overflow: hidden;
+  margin-left: 2rem;
 `;
 
 const Img = styled.img`
@@ -25,7 +28,8 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-left: 8rem;
+  margin-left: 3rem;
+  width: 45%;
 `;
 
 const Button = styled.button`

@@ -81,9 +81,7 @@ export default function PlantForm({ plantAdded }) {
             />
           </div>
 
-          <button type="submit" className="btn btn-primary">
-            Submit
-          </button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </div>
