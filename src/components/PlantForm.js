@@ -72,7 +72,7 @@ export default function PlantForm({ plantAdded }) {
             <Tags tagsUpdated={setTags} key={count} />
           </div>
           <div className="form-group">
-            <label htmlFor="retailer">Retailer</label>
+            <label htmlFor="retailer">Retailer Link</label>
             <input
               type="text"
               name="retailer"
