@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const StyledCard = styled.section`
   display: flex;
-  position: relative;
   justify-content: center;
   align-items: center;
   height: 25rem;
@@ -13,7 +12,6 @@ const StyledCard = styled.section`
 `;
 
 const ImageContainer = styled.div`
-  position: absolute;
   height: 100%;
   width: auto;
   z-index: 1;
