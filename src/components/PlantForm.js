@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import "../App.css";
 import Tags from "./Tags";
-import { FormCard } from "./styledComponents";
+
+import { FormCard, Label, H5 } from "./styledComponents";
 
 export default function PlantForm({ plantAdded }) {
   //set states
@@ -44,11 +46,11 @@ export default function PlantForm({ plantAdded }) {
 
   return (
     <FormCard>
-      <div className="formcard-header">Add a New Plant</div>
+      <H5>ADD A NEW PLANT</H5>
       <div className="formcard-body">
         <form className="" onSubmit={submitPlant}>
           <div className="form-group">
-            <label htmlFor="name">Name</label>
+            <Label htmlFor="name">Name</Label>
             <input
               type="text"
               name="name"
@@ -58,7 +60,7 @@ export default function PlantForm({ plantAdded }) {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="img_link">Image Link</label>
+            <Label htmlFor="img_link">Image Link</Label>
             <input
               type="text"
               name="img_link"
@@ -68,11 +70,11 @@ export default function PlantForm({ plantAdded }) {
             />
           </div>
           <div className="form-group">
-            <p>Tags</p>
+            <p className="text">Tags</p>
             <Tags tagsUpdated={setTags} key={count} />
           </div>
           <div className="form-group">
-            <label htmlFor="retailer">Retailer Link</label>
+            <Label htmlFor="retailer">Retailer Link</Label>
             <input
               type="text"
               name="retailer"

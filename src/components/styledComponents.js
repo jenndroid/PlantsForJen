@@ -34,6 +34,7 @@ export const Button = styled.button`
   width: fit-content;
   margin-top: 0.5rem;
   margin-bottom: 0.3rem;
+  font-family: Bagnard Sans;
 `;
 
 export const H1 = styled.h1`
@@ -51,8 +52,13 @@ export const H4 = styled.h4`
 export const H5 = styled.h5`
   margin-top: 1rem;
   margin-bottom: 1rem;
+  font-family: Martini Regular;
 `;
 
 export const FormCard = styled.div`
   opacity: 80%;
+`;
+
+export const Label = styled.label`
+  font-family: Bagnard Sans;
 `;
