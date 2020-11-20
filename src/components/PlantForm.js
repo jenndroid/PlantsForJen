@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../App.css";
 import Tags from "./Tags";
 
-import { FormCard, Label, H5 } from "./styledComponents";
+import { FormCard, Label, Input, H5, Button } from "./styledComponents";
 
 export default function PlantForm({ plantAdded }) {
   //set states
@@ -46,12 +46,12 @@ export default function PlantForm({ plantAdded }) {
 
   return (
     <FormCard>
-      <H5>ADD A NEW PLANT</H5>
+      <H5>ADD NEW PLANT</H5>
       <div className="formcard-body">
         <form className="" onSubmit={submitPlant}>
           <div className="form-group">
             <Label htmlFor="name">Name</Label>
-            <input
+            <Input
               type="text"
               name="name"
               value={name}
@@ -61,7 +61,7 @@ export default function PlantForm({ plantAdded }) {
           </div>
           <div className="form-group">
             <Label htmlFor="img_link">Image Link</Label>
-            <input
+            <Input
               type="text"
               name="img_link"
               value={img_link}
@@ -75,7 +75,7 @@ export default function PlantForm({ plantAdded }) {
           </div>
           <div className="form-group">
             <Label htmlFor="retailer">Retailer Link</Label>
-            <input
+            <Input
               type="text"
               name="retailer"
               value={retailer}
@@ -83,8 +83,7 @@ export default function PlantForm({ plantAdded }) {
               onChange={(e) => setRetailer(e.target.value)}
             />
           </div>
-
-          <button type="submit">Submit</button>
+          <Button type="submit">Submit</Button>
         </form>
       </div>
     </FormCard>

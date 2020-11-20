@@ -46,7 +46,10 @@ export default function Plant({ plant, refreshPlants }) {
           {/* Tags:{" "} */}
           {plant.tags &&
             plant.tags.map((tag) => (
-              <span className="badge badge-primary mr-2 text">{tag}</span>
+              <>
+                <span className="badge badge-mine mr-2 text">{tag}</span>
+                <span class="sr-only">tagged details</span>
+              </>
             ))}
         </p>
         {/* if the course has not been purchased, give the option to mark it so, and a retailer */}

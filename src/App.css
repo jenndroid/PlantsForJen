@@ -36,3 +36,15 @@
 .text {
   font-family: Bagnard Sans;
 }
+
+.formcard-body {
+  /* border: 5px solid blue; */
+  position: absolute;
+  width: 50%;
+  margin-top: 1.5rem;
+}
+
+.badge-mine {
+  color: white;
+  background-color: hsl(111, 44%, 18%);
+}

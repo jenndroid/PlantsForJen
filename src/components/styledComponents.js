@@ -35,6 +35,7 @@ export const Button = styled.button`
   margin-top: 0.5rem;
   margin-bottom: 0.3rem;
   font-family: Bagnard Sans;
+  background-color: transparent;
 `;
 
 export const H1 = styled.h1`
@@ -50,13 +51,23 @@ export const H4 = styled.h4`
 `;
 
 export const H5 = styled.h5`
-  margin-top: 1rem;
-  margin-bottom: 1rem;
   font-family: Martini Regular;
 `;
 
 export const FormCard = styled.div`
   opacity: 80%;
+  height: 28rem;
+  width: auto;
+  display: flex;
+  position: relative;
+  justify-content: center;
+`;
+
+export const Input = styled.input`
+  border: none;
+  border-bottom: 1px solid hsl(111, 44%, 18%);
+  outline: none;
+  background-color: transparent;
 `;
 
 export const Label = styled.label`
