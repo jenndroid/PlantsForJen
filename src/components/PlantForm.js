@@ -6,12 +6,14 @@ export default function PlantForm({ plantAdded }) {
   const [name, setName] = useState("");
   const [img_link, setImageLink] = useState("");
   const [tags, setTags] = useState([]);
+  const [retailer, setRetailer] = useState("");
   const [count, setCount] = useState(0);
 
   //resetForm just empties out each field by resetting states
   const resetForm = () => {
     setName("");
     setImageLink("");
+    setRetailer("");
     setCount(count + 1);
   };
 
@@ -28,6 +30,7 @@ export default function PlantForm({ plantAdded }) {
         body: JSON.stringify({
           name,
           img_link,
+          retailer,
           tags,
         }),
       });
@@ -66,6 +69,16 @@ export default function PlantForm({ plantAdded }) {
           <div className="form-group">
             <p>Tags</p>
             <Tags tagsUpdated={setTags} key={count} />
+          </div>
+          <div className="form-group">
+            <label htmlFor="retailer">Retailer</label>
+            <input
+              type="text"
+              name="retailer"
+              value={retailer}
+              className="form-control"
+              onChange={(e) => setRetailer(e.target.value)}
+            />
           </div>
 
           <button type="submit" className="btn btn-primary">

@@ -60,17 +60,25 @@ export default function Plant({ plant, refreshPlants }) {
       </ImageContainer>
       <p>
         {/* if there are tags for the course, display them by creating one span element for each  */}
-        Tags:{" "}
+        {/* Tags:{" "} */}
         {plant.tags &&
           plant.tags.map((tag) => (
             <span className="badge badge-primary mr-2">{tag}</span>
           ))}
       </p>
-      {/* if the course has not been purchased, give the option to mark it so */}
+      {/* if the course has not been purchased, give the option to mark it so, and a retailer */}
       {!plant.purchased && (
-        <button className="btn btn-sm btn-primary" onClick={markPlantPurchased}>
-          Purchased
-        </button>
+        <>
+          <a href={plant.retailer}>
+            <h4>{plant.retailer}</h4>
+          </a>
+          <button
+            className="btn btn-sm btn-primary"
+            onClick={markPlantPurchased}
+          >
+            Purchased
+          </button>
+        </>
       )}
       {/* delete button */}
       <button className="btn btn-sm btn-danger ml-2" onClick={deletePlant}>
