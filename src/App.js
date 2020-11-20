@@ -15,7 +15,6 @@ function App() {
       const res = await fetch("/api/Plants");
       const plants = await res.json();
       setPlants(plants);
-      console.log(plants);
     } catch (error) {
       console.error(error);
     }
