@@ -1,47 +1,13 @@
 import React from "react";
-import styled from "styled-components";
-
-const StyledCard = styled.section`
-  display: flex;
-  align-items: center;
-  height: 35rem;
-  width: auto;
-  margin: 1rem;
-  padding: 0.5rem;
-  border: 5px solid black;
-`;
-
-const ImageContainer = styled.div`
-  height: 500px;
-  width: 600px;
-  z-index: 1;
-  overflow: hidden;
-  margin-left: 2rem;
-`;
-
-const Img = styled.img`
-  max-width: 100%;
-  max-height: 100%;
-`;
-
-const TextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-left: 3rem;
-  width: 45%;
-`;
-
-const Button = styled.button`
-  width: fit-content;
-  margin-top: 0.5rem;
-  margin-bottom: 0.3rem;
-`;
-
-const H5 = styled.h5`
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-`;
+import {
+  StyledCard,
+  ImageContainer,
+  Img,
+  TextContainer,
+  H4,
+  H5,
+  Button,
+} from "./styledComponents";
 
 export default function Plant({ plant, refreshPlants }) {
   const markPlantPurchased = async () => {
@@ -68,6 +34,8 @@ export default function Plant({ plant, refreshPlants }) {
     }
   };
 
+  plant.name = plant.name.toUpperCase();
+
   //returns one component
   return (
     <StyledCard>
@@ -75,7 +43,7 @@ export default function Plant({ plant, refreshPlants }) {
         <Img className="img plant" src={plant.img_link} alt={plant.name} />
       </ImageContainer>
       <TextContainer>
-        <h4 className="list-group-item-heading">{plant.name}</h4>
+        <H4 className="list-group-item-heading">{plant.name}</H4>
         <p>
           {/* if there are tags for the course, display them by creating one span element for each  */}
           {/* Tags:{" "} */}

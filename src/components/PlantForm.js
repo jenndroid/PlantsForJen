@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Tags from "./Tags";
+import { FormCard } from "./styledComponents";
 
 export default function PlantForm({ plantAdded }) {
   //set states
@@ -42,9 +43,9 @@ export default function PlantForm({ plantAdded }) {
   };
 
   return (
-    <div className="card">
-      <div className="card-header">Add a New Plant</div>
-      <div className="card-body">
+    <FormCard>
+      <div className="formcard-header">Add a New Plant</div>
+      <div className="formcard-body">
         <form className="" onSubmit={submitPlant}>
           <div className="form-group">
             <label htmlFor="name">Name</label>
@@ -84,6 +85,6 @@ export default function PlantForm({ plantAdded }) {
           <button type="submit">Submit</button>
         </form>
       </div>
-    </div>
+    </FormCard>
   );
 }

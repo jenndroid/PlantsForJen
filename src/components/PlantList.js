@@ -1,10 +1,11 @@
 import React from "react";
 import Plant from "./Plant";
+import { H2 } from "./styledComponents";
 
 export default function PlantList({ plants, refreshPlants }) {
   return (
     <div>
-      <h2 className="mt-5 mb-3">Want</h2>
+      <H2 className="mt-5 mb-3">WANT</H2>
       <div className="list-group">
         {plants
           .filter((plant) => !plant.purchased)
@@ -12,7 +13,7 @@ export default function PlantList({ plants, refreshPlants }) {
             <Plant plant={plant} key={plant.id} refreshPlants={refreshPlants} />
           ))}
       </div>
-      <h2 className="mt-5 mb-3">Got</h2>
+      <H2 className="mt-5 mb-3">GOT</H2>
       {plants
         .filter((plant) => plant.purchased)
         .map((plant) => (

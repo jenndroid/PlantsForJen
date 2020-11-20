@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import PlantList from "./components/PlantList";
 import PlantForm from "./components/PlantForm";
+import { H1 } from "./components/styledComponents";
 
 function App() {
   //at app level, courses is set to nothing initially
@@ -26,7 +27,7 @@ function App() {
   }, []);
   return (
     <div className="container mt-5">
-      <h1 className="mb-5 text-center">Plant wishlist</h1>
+      <H1 className="mb-5 text-center">DREAM PLANTS</H1>
       {/* the fetch request to get all course records is  passed as a prop to courseForm and renamed */}
       <PlantForm plantAdded={loadPlants} />
       <PlantList plants={plants} refreshPlants={loadPlants} />
