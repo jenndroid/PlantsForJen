@@ -23,7 +23,7 @@ export default function PlantForm({ plantAdded }) {
   const submitPlant = async (e) => {
     e.preventDefault();
     try {
-      await fetch("/api/plants", {
+      await fetch("/api/Plants", {
         method: "POST",
         body: JSON.stringify({
           name,

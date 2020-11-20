@@ -12,7 +12,7 @@ function App() {
   //pass that into setCourse
   const loadPlants = async () => {
     try {
-      const res = await fetch("/api/plants");
+      const res = await fetch("/api/Plants");
       const plants = await res.json();
       setPlants(plants);
       console.log(plants);
