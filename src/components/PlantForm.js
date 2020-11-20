@@ -36,7 +36,6 @@ export default function PlantForm({ plantAdded }) {
     } catch (err) {
       console.error(err);
     }
-    console.log(name, img_link);
   };
 
   return (
