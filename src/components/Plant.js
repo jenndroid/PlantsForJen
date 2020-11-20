@@ -3,11 +3,9 @@ import styled from "styled-components";
 
 const StyledCard = styled.section`
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 25rem;
   width: auto;
-  border: 5px solid black;
   margin: 1rem;
   padding: 0.5rem;
 `;
@@ -16,26 +14,29 @@ const ImageContainer = styled.div`
   height: 100%;
   width: auto;
   z-index: 1;
-  border: 5px solid blue;
 `;
 
 const Img = styled.img`
   max-width: 100%;
   max-height: 100%;
-  border: 5px solid red;
 `;
 
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-left: 0.5rem;
+  margin-left: 8rem;
 `;
 
 const Button = styled.button`
   width: fit-content;
   margin-top: 0.5rem;
   margin-bottom: 0.3rem;
+`;
+
+const H5 = styled.h5`
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 `;
 
 export default function Plant({ plant, refreshPlants }) {
@@ -83,10 +84,10 @@ export default function Plant({ plant, refreshPlants }) {
         {!plant.purchased && (
           <>
             <a href={plant.retailer}>
-              <h4>{plant.retailer}</h4>
+              <H5>{plant.retailer}</H5>
             </a>
             <Button
-              className="btn btn-sm btn-primary"
+              // className="btn btn-sm btn-primary"
               onClick={markPlantPurchased}
             >
               Purchased
@@ -94,7 +95,10 @@ export default function Plant({ plant, refreshPlants }) {
           </>
         )}
         {/* delete button */}
-        <Button className="btn btn-sm btn-danger ml-2" onClick={deletePlant}>
+        <Button
+          // className="btn btn-sm btn-danger ml-2"
+          onClick={deletePlant}
+        >
           Delete
         </Button>
       </TextContainer>
