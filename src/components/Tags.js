@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Label } from "./styledComponents";
 
 export default function Tags({ tagsUpdated, key }) {
   const tagChoices = ["Rare", "Expensive", "Fussy"];
@@ -36,10 +37,10 @@ export default function Tags({ tagsUpdated, key }) {
   return (
     <>
       {tagChoices.map((choice, index) => (
-        <label className="checkbox-inline mr-3" key={index}>
+        <Label className="checkbox-inline mr-3" key={index}>
           <input type="checkbox" value={choice} onChange={tagChange} />
           {" " + choice}
-        </label>
+        </Label>
       ))}
     </>
   );

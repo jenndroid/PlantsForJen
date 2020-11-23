@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import "../App.css";
 import Tags from "./Tags";
-import { FormCard } from "./styledComponents";
+
+import { FormCard, Label, Input, H5, Button } from "./styledComponents";
 
 export default function PlantForm({ plantAdded }) {
   //set states
@@ -44,12 +46,12 @@ export default function PlantForm({ plantAdded }) {
 
   return (
     <FormCard>
-      <div className="formcard-header">Add a New Plant</div>
+      <H5>ADD NEW PLANT</H5>
       <div className="formcard-body">
         <form className="" onSubmit={submitPlant}>
           <div className="form-group">
-            <label htmlFor="name">Name</label>
-            <input
+            <Label htmlFor="name">Name</Label>
+            <Input
               type="text"
               name="name"
               value={name}
@@ -58,8 +60,8 @@ export default function PlantForm({ plantAdded }) {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="img_link">Image Link</label>
-            <input
+            <Label htmlFor="img_link">Image Link</Label>
+            <Input
               type="text"
               name="img_link"
               value={img_link}
@@ -68,12 +70,12 @@ export default function PlantForm({ plantAdded }) {
             />
           </div>
           <div className="form-group">
-            <p>Tags</p>
+            <p className="text">Tags</p>
             <Tags tagsUpdated={setTags} key={count} />
           </div>
           <div className="form-group">
-            <label htmlFor="retailer">Retailer Link</label>
-            <input
+            <Label htmlFor="retailer">Retailer Link</Label>
+            <Input
               type="text"
               name="retailer"
               value={retailer}
@@ -81,8 +83,7 @@ export default function PlantForm({ plantAdded }) {
               onChange={(e) => setRetailer(e.target.value)}
             />
           </div>
-
-          <button type="submit">Submit</button>
+          <Button type="submit">Submit</Button>
         </form>
       </div>
     </FormCard>

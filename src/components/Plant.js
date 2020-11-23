@@ -5,7 +5,6 @@ import {
   Img,
   TextContainer,
   H4,
-  H5,
   Button,
 } from "./styledComponents";
 
@@ -34,8 +33,6 @@ export default function Plant({ plant, refreshPlants }) {
     }
   };
 
-  plant.name = plant.name.toUpperCase();
-
   //returns one component
   return (
     <StyledCard>
@@ -43,20 +40,24 @@ export default function Plant({ plant, refreshPlants }) {
         <Img className="img plant" src={plant.img_link} alt={plant.name} />
       </ImageContainer>
       <TextContainer>
-        <H4 className="list-group-item-heading">{plant.name}</H4>
+        <H4 className="list-group-item-heading">{plant.name.toUpperCase()}</H4>
         <p>
           {/* if there are tags for the course, display them by creating one span element for each  */}
           {/* Tags:{" "} */}
           {plant.tags &&
             plant.tags.map((tag) => (
-              <span className="badge badge-primary mr-2">{tag}</span>
+              <>
+                <span className="badge badge-mine mr-2 text">{tag}</span>
+                <span class="sr-only">tagged details</span>
+              </>
             ))}
         </p>
         {/* if the course has not been purchased, give the option to mark it so, and a retailer */}
         {!plant.purchased && (
           <>
+            {/* make plant retailer bigger */}
             <a href={plant.retailer}>
-              <H5>{plant.retailer}</H5>
+              <p className="text">{plant.retailer}</p>
             </a>
             <Button
               // className="btn btn-sm btn-primary"
