@@ -55,6 +55,7 @@ export default function Plant({ plant, refreshPlants }) {
         {/* if the course has not been purchased, give the option to mark it so, and a retailer */}
         {!plant.purchased && (
           <>
+            {/* make plant retailer bigger */}
             <a href={plant.retailer}>
               <p className="text">{plant.retailer}</p>
             </a>
