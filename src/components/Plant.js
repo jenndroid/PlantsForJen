@@ -63,7 +63,7 @@ export default function Plant({ plant, refreshPlants }) {
               // className="btn btn-sm btn-primary"
               onClick={markPlantPurchased}
             >
-              Purchased
+              > Purchased
             </Button>
           </>
         )}
@@ -72,7 +72,7 @@ export default function Plant({ plant, refreshPlants }) {
           // className="btn btn-sm btn-danger ml-2"
           onClick={deletePlant}
         >
-          Delete
+          > Delete
         </Button>
       </TextContainer>
     </StyledCard>

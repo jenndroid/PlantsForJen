@@ -9,7 +9,6 @@ export const StyledCard = styled.section`
   margin: 1rem;
 `;
 
-//could make this bigger later
 export const ImageContainer = styled.div`
   height: 500px;
   width: 600px;
@@ -37,6 +36,7 @@ export const Button = styled.button`
   margin-bottom: 0.3rem;
   font-family: Bagnard Sans;
   background-color: transparent;
+  border: none;
 `;
 
 export const H1 = styled.h1`
