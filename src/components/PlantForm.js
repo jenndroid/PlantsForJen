@@ -83,7 +83,7 @@ export default function PlantForm({ plantAdded }) {
               onChange={(e) => setRetailer(e.target.value)}
             />
           </div>
-          <Button type="submit">Submit</Button>
+          <Button type="submit"> > Submit</Button>
         </form>
       </div>
     </FormCard>

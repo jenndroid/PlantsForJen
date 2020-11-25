@@ -9,7 +9,6 @@ export const StyledCard = styled.section`
   margin: 1rem;
 `;
 
-//could make this bigger later
 export const ImageContainer = styled.div`
   height: 500px;
   width: 600px;
@@ -32,11 +31,27 @@ export const TextContainer = styled.div`
 `;
 
 export const Button = styled.button`
+  position: relative;
   width: fit-content;
   margin-top: 0.5rem;
   margin-bottom: 0.3rem;
   font-family: Bagnard Sans;
   background-color: transparent;
+  border: none;
+  &:after {
+    border: 0 solid transparent;
+    transition: all 0.3s;
+    content: "";
+    height: 0;
+    position: absolute;
+    width: 24px;
+    border-bottom: 2px solid #141414;
+    bottom: -4px;
+    left: 0;
+  }
+  &:hover:after {
+    width: 100%;
+  }
 `;
 
 export const H1 = styled.h1`
