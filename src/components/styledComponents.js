@@ -45,7 +45,7 @@ export const Button = styled.button`
     height: 0;
     position: absolute;
     width: 24px;
-    border-bottom: 2px solid #141414;
+    border-bottom: 2px solid #c1a9ae;
     bottom: -4px;
     left: 0;
   }
