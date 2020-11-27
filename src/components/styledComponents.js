@@ -3,18 +3,22 @@ import "../App.css";
 
 export const StyledCard = styled.section`
   display: flex;
+  flex-direction: column;
   align-items: center;
   height: 35rem;
   width: auto;
   margin: 1rem;
+  border: 2px solid black;
 `;
 
 export const ImageContainer = styled.div`
-  height: 500px;
-  width: 600px;
+  height: 50%;
+  width: auto;
   z-index: 1;
   overflow: hidden;
   margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
 `;
 
 export const Img = styled.img`
@@ -27,7 +31,8 @@ export const TextContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   margin-left: 3rem;
-  width: 45%;
+  margin-right: 3rem;
+  overflow-wrap: break-word;
 `;
 
 export const Button = styled.button`
