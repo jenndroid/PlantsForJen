@@ -55,7 +55,12 @@ export default function Plant({ plant, refreshPlants }) {
         {/* if the course has not been purchased, give the option to mark it so, and a retailer */}
         {!plant.purchased && (
           <>
-            <a className="card__link" href={plant.retailer}>
+            <a
+              className="card__link"
+              target="_blank"
+              rel="noopener"
+              href={plant.retailer}
+            >
               {plant.retailer}
             </a>
             <Button
