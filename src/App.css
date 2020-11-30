@@ -50,13 +50,8 @@
   grid-template-columns: repeat(3, 33.3%);
 }
 
-a,
-a:link {
+.card__link {
   font-family: Bagnard Sans;
+  word-break: break-word;
   color: hsl(161, 100%, 18%);
-}
-
-a:hover,
-a:active {
-  color: hotpink;
 }

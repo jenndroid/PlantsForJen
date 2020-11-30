@@ -32,7 +32,6 @@ export const TextContainer = styled.div`
   justify-content: flex-start;
   margin-left: 3rem;
   margin-right: 3rem;
-  overflow-wrap: break-word;
 `;
 
 export const Button = styled.button`
