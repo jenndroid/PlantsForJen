@@ -58,7 +58,7 @@ export default function Plant({ plant, refreshPlants }) {
             <a
               className="card__link"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               href={plant.retailer}
             >
               {plant.retailer}
