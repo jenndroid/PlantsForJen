@@ -45,13 +45,13 @@
   background-color: hsl(111, 44%, 18%);
 }
 
-a,
-a:link {
-  font-family: Bagnard Sans;
-  color: hsl(161, 100%, 18%);
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
 }
 
-a:hover,
-a:active {
-  color: hotpink;
+.card__link {
+  font-family: Bagnard Sans;
+  word-break: break-word;
+  color: hsl(161, 100%, 18%);
 }

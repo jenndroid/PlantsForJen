@@ -2,19 +2,49 @@ import styled from "styled-components";
 import "../App.css";
 
 export const StyledCard = styled.section`
+  position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   height: 35rem;
   width: auto;
   margin: 1rem;
+  border: 2px solid #c1a9ae;
+  box-shadow: 5px 5px #c1a9ae;
+  &:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px #c1a9ae;
+    top: -4px;
+    border: 2px solid #c1a9ae;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transition: transform 0.15s ease-out;
+  }
+
+  &:hover:before {
+    transform: scale(2.15);
+  }
 `;
 
 export const ImageContainer = styled.div`
-  height: 500px;
-  width: 600px;
+  height: 50%;
+  width: auto;
   z-index: 1;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
 `;
 
 export const Img = styled.img`
@@ -27,7 +57,7 @@ export const TextContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   margin-left: 3rem;
-  width: 45%;
+  margin-right: 3rem;
 `;
 
 export const Button = styled.button`
