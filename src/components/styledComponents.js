@@ -16,6 +16,9 @@ export const ImageContainer = styled.div`
   width: auto;
   z-index: 1;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 2rem;
   margin-right: 2rem;
   margin-top: 2rem;
