@@ -29,6 +29,11 @@
   color: hsl(161, 100%, 18%);
 }
 
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
 /* Mobile */
 .formcard-body {
   position: absolute;
@@ -42,10 +47,5 @@
     position: absolute;
     width: 50%;
     margin-top: 1.5rem;
-  }
-
-  .card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
   }
 }
