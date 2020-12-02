@@ -1,22 +1,7 @@
+/* All styles */
+
 .App {
   text-align: center;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 @font-face {
@@ -33,25 +18,34 @@
   font-family: Bagnard Sans;
 }
 
-.formcard-body {
-  /* border: 5px solid blue; */
-  position: absolute;
-  width: 50%;
-  margin-top: 1.5rem;
-}
-
 .badge-mine {
   color: white;
   background-color: hsl(111, 44%, 18%);
-}
-
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(3, 33.3%);
 }
 
 .card__link {
   font-family: Bagnard Sans;
   word-break: break-word;
   color: hsl(161, 100%, 18%);
+}
+
+/* Mobile */
+.formcard-body {
+  position: absolute;
+  width: 80%;
+  margin-top: 1.5rem;
+}
+
+/* Desktop only styles */
+@media only screen and (min-width: 768px) {
+  .formcard-body {
+    position: absolute;
+    width: 50%;
+    margin-top: 1.5rem;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+  }
 }
