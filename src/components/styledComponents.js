@@ -9,6 +9,8 @@ export const StyledCard = styled.section`
   height: 35rem;
   width: auto;
   margin: 1rem;
+  padding-bottom: 1rem;
+  overflow: scroll;
   border: 2px solid #c1a9ae;
   box-shadow: 5px 5px #c1a9ae;
   &:hover {
