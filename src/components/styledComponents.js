@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import "../App.css";
 
+// give card a height rather than grid rows
+// because I don't know how many cards there will be
 export const StyledCard = styled.section`
   position: relative;
   display: flex;
@@ -10,7 +12,6 @@ export const StyledCard = styled.section`
   width: auto;
   margin: 1rem;
   padding-bottom: 1rem;
-  overflow: scroll;
   border: 2px solid #c1a9ae;
   box-shadow: 5px 5px #c1a9ae;
   &:hover {
