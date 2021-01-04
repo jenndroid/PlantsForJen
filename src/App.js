@@ -25,6 +25,7 @@ function App() {
   useEffect(() => {
     loadPlants();
   }, []);
+
   return (
     <div className="container mt-5">
       <H1 className="mb-5 text-center">DREAM PLANTS</H1>

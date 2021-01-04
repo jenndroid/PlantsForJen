@@ -57,6 +57,7 @@ export default function PlantForm({ plantAdded }) {
               value={name}
               className="form-control"
               onChange={(e) => setName(e.target.value)}
+              required
             />
           </div>
           <div className="form-group">
@@ -67,11 +68,12 @@ export default function PlantForm({ plantAdded }) {
               value={img_link}
               className="form-control"
               onChange={(e) => setImageLink(e.target.value)}
+              required
             />
           </div>
           <div className="form-group">
             <p className="text">Tags</p>
-            <Tags tagsUpdated={setTags} key={count} />
+            <Tags tagsUpdated={setTags} />
           </div>
           <div className="form-group">
             <Label htmlFor="retailer">Retailer Link</Label>

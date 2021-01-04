@@ -42,17 +42,19 @@ export default function Plant({ plant, refreshPlants }) {
       <TextContainer>
         <H4 className="list-group-item-heading">{plant.name.toUpperCase()}</H4>
         <p>
-          {/* if there are tags for the course, display them by creating one span element for each  */}
+          {/* if there are tags for the course,
+           display them by creating one span element for each  */}
           {/* Tags:{" "} */}
           {plant.tags &&
             plant.tags.map((tag) => (
               <>
                 <span className="badge badge-mine mr-2 text">{tag}</span>
-                <span class="sr-only">tagged details</span>
+                <span className="sr-only">tagged details</span>
               </>
             ))}
         </p>
-        {/* if the course has not been purchased, give the option to mark it so, and a retailer */}
+        {/* if the course has not been purchased, 
+        give the option to mark it so, and a retailer */}
         {!plant.purchased && (
           <>
             <a
